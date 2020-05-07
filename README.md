@@ -1,10 +1,21 @@
 # Account Login
 
+
+### Overvies
 #### Simple login page
+- [x] use test account and password to sign in page
+
+**Add cookie to keep logged in**
+- [x] keep logged in before closed page
+- [x] or click sign out icon to log out 
+
+<br>
 
 ![index](https://i.imgur.com/we4QnDE.png)
 
 ![welcome](https://i.imgur.com/bs9AOc4.png)
+
+![home](https://i.imgur.com/MqOe3zO.png)
 
 
 ## Prerequisites

@@ -46,7 +46,7 @@ justify-content: center;
   text-align: center;
 }
 
-.success-box {
+.welcome-box {
   height: 70px;
   width: 550px;
   background-color: rgb(231, 219, 204);
@@ -62,4 +62,13 @@ justify-content: center;
 .welcome {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
+}
+.login-word {
+  font-size: 200px;
+  margin-top: 100px;
+}
+.icon {
+  font-size: 70px;
+  margin: 30px;
+  color: rgb(50, 75, 102);
 }

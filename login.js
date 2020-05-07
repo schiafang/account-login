@@ -29,7 +29,7 @@ function login (email, password) {
 
   for (let i = 0; i < users.length; i++) {
     if (email === users[i].email && password === users[i].password) {
-      return `Welcome back, ${users[i].firstName}`
+      return `${users[i].firstName}`
     }
   }
   return 'Verify failed! please try again.'
