@@ -11,11 +11,11 @@
 
 <br>
 
-![index](https://i.imgur.com/we4QnDE.png)
+![index](https://i.imgur.com/nRibfzf.png)
 
-![welcome](https://i.imgur.com/bs9AOc4.png)
+![welcome](https://i.imgur.com/O2NqxtG.png)
 
-![home](https://i.imgur.com/MqOe3zO.png)
+![home](https://i.imgur.com/xjFVHj4.png)
 
 
 ## Prerequisites
