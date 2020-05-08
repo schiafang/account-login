@@ -8,24 +8,20 @@ const port = 3000
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
-app.set('trust proxy', 1)
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(session({
-  name: 'name',
+  name: 'accoutlogin',
   secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
-  // maxAge: 100 * 1000 
-  // 沒設置清除時間，關閉分頁自動清空 session
 }))
 
 app.listen(port, () => {
   console.log(`This server is listening on http://localhost:${port}`)
 })
 
-// 開啟首頁 localhost:3000/ 
-// 如果在已登入狀態則重新指向到 /login
+// 開啟localhost:3000， 如果在已登入狀態則重新指向到 /login
 app.get('/', (req, res) => {
   if (req.session.logged === true) {
     res.redirect('/home')
