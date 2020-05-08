@@ -134,25 +134,25 @@ res.clearCookie(name [, options])
 
 ### 傳送流程
 
-用戶端發送請求 <font color="#FF7E12">(request)</font>
+用戶端發送請求 (request)
 
-<font color="#888888">伺服器比對用戶 sessionID (verify NO)</font> 
+伺服器比對用戶 sessionID (verify NO)
 
-伺服器回應一般入口(不含用戶資料的介面) <font color="#2490BA">(resposne)</font> 
+伺服器回應一般入口(不含用戶資料的介面) (resposne)
 
-用戶填寫表單(登入)或操作頁面資料(購物車)，瀏覽器將資料與請求傳給伺服器端 <font color="#FF7E12">(request)</font>
+用戶填寫表單(登入)或操作頁面資料(購物車)，瀏覽器將資料與請求傳給伺服器端 (request)
 
-<font color="#888888">伺服器端比對用戶資料狀態，建立一組 sessionID (verify YES)</font>
+伺服器端比對用戶資料狀態，建立一組 sessionID (verify YES)
 
-伺服器將 set-cookie 指令與 sessionID 和資料傳送給用戶端 <font color="#2490BA">(resposne)</font> 
+伺服器將 set-cookie 指令與 sessionID 和資料傳送給用戶端(resposne)
 
-<font color="#888888">瀏覽器收到伺服器傳來的指令儲存 sessionID 在 cookie 中</font> 
+瀏覽器收到伺服器傳來的指令儲存 sessionID 在 cookie 中
 
-用戶再次發送請求，瀏覽器同時帶上 cookie 中的數據資料傳送給伺服器端 <font color="#FF7E12">(request)</font>
+用戶再次發送請求，瀏覽器同時帶上 cookie 中的數據資料傳送給伺服器端 (request)
 
-<font color="#888888">伺服器端透過 sessionID 比對用戶資料狀態 (verify YES)</font>
+伺服器端透過 sessionID 比對用戶資料狀態 (verify YES)
 
-回傳相對應信息並更新用戶資料狀態 <font color="#2490BA">(resposne)</font> 
+回傳相對應信息並更新用戶資料狀態(resposne)
 
 
 
@@ -170,8 +170,8 @@ app.use(session(secret:'', [options]))
 
 // options 可加入其他需要的屬性 ex:
 // name：設置儲存在 cookie 中的名稱
-// store：設定儲存方式。
-// genid：產生一個新的 sessionID 時，所使用的函數。(預設：使用uid2套件)
+// store：設定儲存方式
+// genid：產生一個新的 sessionID 時，所使用的函數 (預設使用uid2套件)
 // rolling：每次請求都重新設置一個 cookie
 // resave：沒有修改 session 也會更新儲存
 // saveUninitialized：強制將未初始化的 session 存回 session store
@@ -187,7 +187,7 @@ app.use(session(secret:'', [options]))
 2. 當帳號密碼送出時，透過 login.js 比對帳號密碼是否正確
 3. 錯誤時 `app.post('/')` 回應重新渲染 index 頁面<br>
    並在 session 中新增一個屬性，標記為未登入狀態 `logged: false`
-4. 帳號密碼正確，登入成功 `app.post('/')` 重新指向路徑到 `/welcom`，並標註登入狀態 `logged: true`
+4. 帳號密碼正確，登入成功 `app.post('/')` 重新指向路徑到 `/welcome`，並標註登入狀態 `logged: true`
 5. 當頁面指向 `/welcome` 渲染 `welcome.handlebars` 頁面
 6. 建立登入後主頁面，在 welcome 頁面中導引至主頁面
 7. 此時在未關閉網頁的狀態下 session 有效，登入狀態在 `logged: true`
